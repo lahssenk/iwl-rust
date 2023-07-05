@@ -7,6 +7,5 @@ with installing rustup. rustup helps with installing stable and nightly versions
 
 https://www.rust-lang.org/tools/install
 
-```
-https://www.rust-lang.org/tools/install
-```
+- install nightly channel: `rustup toolchain install nightly`
+- update rust version with `rustup update`
