@@ -7,9 +7,9 @@ Read [the installation guide](INSTALL.md) to prepare your machine. This repo is 
 # PROGRESSION
 
 ## Chapters
-- [Hello world](hello-world/readme.md)
-- [Basic Types]()
-- [Collections]()
+- [Hello world](hello-world/README.md)
+- [Basic Types](basic-types/README.md)
+- [Collections](collections/README.md)
 - [Objects/Classes]()
 - [Flow Control]()
 - [Functions]()

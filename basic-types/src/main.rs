@@ -14,15 +14,21 @@ fn main() {
     // print using variable expansion
     println!("NUM: {NUM}");
 
-    // declare an Owned string variable. String type is stored on heap, is owned
+    // declare an immutable string slice
+    let _string_slice = "string slice";
+
+    // declare an Owned string buffer. String type is stored on heap, is owned
     // and can grow.
     // NOTE: rust compiler will complain if you declare a var you don't use,
     // unless you prefix it with _
     let _owned_string = String::from("owned string");
-    // for a static string litteral, prefer &str
-    let _string_slice = "string slice";
 
-    println!("strings: {_owned_string:?}, {_string_slice:?}");
+    // create dynamic owned String buffer with the format! macro
+    let _formatted_string = format!("x = {}, y = {y}", 10, y = 30);
+
+    println!(
+        "strings: owned={_owned_string:?}, slice={_string_slice:?}, formatted={_formatted_string:?}"
+    );
 
     // unsigned integers
     let _unsigned8: u8 = 1;
