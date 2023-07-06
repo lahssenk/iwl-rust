@@ -43,10 +43,19 @@ fn main() {
         "MyStruct instance: {my_object:?}, name={}, age={}",
         my_object.name, my_object.age
     );
+
+    // create an instance of the tuple struct
+    let tuple = MyTupleStruct("abc".into(), 10);
+
+    println!("the tuple struct instance: {tuple:?}")
 }
 
+// derive Debug to use debug print format {:?}
 #[derive(Debug, Default)]
 struct MyStruct {
     name: String,
     age: i8,
 }
+
+#[derive(Debug)]
+struct MyTupleStruct(String, i8);
