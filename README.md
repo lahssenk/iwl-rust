@@ -10,7 +10,7 @@ Read [the installation guide](INSTALL.md) to prepare your machine. This repo is 
 - [Hello world](hello-world/README.md)
 - [Basic Types](basic-types/README.md)
 - [Collections](collections/README.md)
-- [Objects/Classes]()
+- [Objects/Classes](objects/README.md)
 - [Flow Control]()
 - [Functions]()
 - [Error Handling]()
