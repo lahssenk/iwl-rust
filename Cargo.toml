@@ -2,7 +2,8 @@
 
 members = [
     "hello-world",
-    "basic-types",
+    "scalar-types",
     "collections",
     "objects",
+    "enums",
 ]

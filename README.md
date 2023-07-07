@@ -8,8 +8,9 @@ Read [the installation guide](INSTALL.md) to prepare your machine. This repo is 
 
 ## Chapters
 - [Hello world](hello-world/README.md)
-- [Basic Types](basic-types/README.md)
+- [Basic Types](scalar-types/README.md)
 - [Collections](collections/README.md)
+- [Enums](enums/README.md)
 - [Objects/Classes](objects/README.md)
 - [Flow Control]()
 - [Functions]()

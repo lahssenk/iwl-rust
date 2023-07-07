@@ -1,9 +1,7 @@
-# Basic-Types
+# Scalar Types
 
 This crate presents the simplest algebraic data types that
 are available in rust.
-
-## Scalar Types
 
 Signed integers
 types: i8, i16, i32, i64, i128, isize (1 cpu word)
