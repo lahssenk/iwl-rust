@@ -1,9 +1,10 @@
 [workspace]
 
 members = [
-    "hello-world",
-    "scalar-types",
+    "hello_world",
+    "scalar_types",
     "collections",
     "objects",
     "enums",
+    "flow_control",
 ]

@@ -7,12 +7,12 @@ Read [the installation guide](INSTALL.md) to prepare your machine. This repo is 
 # PROGRESSION
 
 ## Chapters
-- [Hello world](hello-world/README.md)
-- [Basic Types](scalar-types/README.md)
+- [Hello world](hello_world/README.md)
+- [Basic Types](scalar_types/README.md)
 - [Collections](collections/README.md)
 - [Enums](enums/README.md)
 - [Objects/Classes](objects/README.md)
-- [Flow Control]()
+- [Flow Control](flow_control/README.md)
 - [Functions]()
 - [Error Handling]()
 - [Testing]()
