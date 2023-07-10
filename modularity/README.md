@@ -16,7 +16,7 @@ mod something {
 ```
 - extract the module into another file
 -> the name of the module is the name of the file, example something.rs is implicitly declared as `mod something`
--> if you have many files in the same folder, create a mod.rs file and add the list of internal modules with `mod <moduleName>;` statements;
+-> if you want to group modules together in a parent module (example named `sub`), the old way was to create `sub/mod.rs`, add `mod` statements to make inner modules visible, and then mount module `sub` into scope in main with `mod sub`. The new way is to replace `sub/mod.rs` with `sub.rs`
 
 # Visibility
 
