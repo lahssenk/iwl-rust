@@ -20,7 +20,7 @@ Read [the installation guide](INSTALL.md) to prepare your machine. This repo is 
 - [Modularity](modularity/README.md)
 - [Imports](imports/README.md)
 - [Compilation](compilation/README.md)
-- [Pointers]()
+- [Pointers](pointers/README.md)
 - [Interfaces]()
 - [Generics]()
 - [Files]()
