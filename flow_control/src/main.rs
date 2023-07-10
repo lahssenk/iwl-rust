@@ -41,7 +41,7 @@ fn main() {
     let mut i = 0;
     while i < 3 {
         println!("i= {i}");
-        i = i + 1;
+        i += i;
     }
 
     // while let repeatedly tests a value against a pattern
@@ -85,7 +85,7 @@ fn main() {
     // break must be invoked explicilty
     let mut x = 3;
     loop {
-        x = x - 1;
+        x -= 1;
 
         if x == 0 {
             break;
@@ -101,7 +101,7 @@ fn main() {
     // rewrite it with match
     let mut x = 3;
     'named_loop: loop {
-        x = x - 1;
+        x -= 1;
 
         match x {
             3 => {
