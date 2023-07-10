@@ -7,4 +7,5 @@ members = [
     "objects",
     "enums",
     "flow_control",
+    "functions",
 ]

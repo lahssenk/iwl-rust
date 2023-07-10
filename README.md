@@ -13,7 +13,7 @@ Read [the installation guide](INSTALL.md) to prepare your machine. This repo is 
 - [Enums](enums/README.md)
 - [Objects/Classes](objects/README.md)
 - [Flow Control](flow_control/README.md)
-- [Functions]()
+- [Functions](functions/README.md)
 - [Error Handling]()
 - [Testing]()
 - [Methods]()
