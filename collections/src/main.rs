@@ -40,4 +40,31 @@ fn main() {
     // create a hash map using the default hasher func, pre-allocating for 10 elems
     let mut _map = std::collections::HashMap::with_capacity(10);
     _map.insert("a", 1);
+    // the map does not yet contain any value for key 'missing'
+    assert_eq!(None, _map.get("missing"));
+
+    _map.entry("missing").or_insert(100);
+    // reading from a map returns a reference -> need to clone the value to compare to our static 100
+    assert_eq!(Some(100), _map.get("missing").cloned());
+
+    // some neat methods on vectors
+    let mut v1 = Vec::new();
+    v1.push(42);
+    println!("v1: len = {}, capacity = {}", v1.len(), v1.capacity());
+
+    let mut v2 = Vec::with_capacity(v1.len() + 1);
+    v2.extend(v1.iter());
+    v2.push(9999);
+    println!("v2: len = {}, capacity = {}", v2.len(), v2.capacity());
+
+    // Canonical macro to initialize a vector with elements.
+    let mut v3 = vec![0, 0, 1, 2, 3, 4];
+
+    // Retain only the even elements.
+    v3.retain(|x| x % 2 == 0);
+    println!("{v3:?}");
+
+    // Remove consecutive duplicates.
+    v3.dedup();
+    println!("{v3:?}");
 }
