@@ -11,4 +11,5 @@ members = [
     "errors",
     "testing",
     "methods",
+    "modularity",
 ]
