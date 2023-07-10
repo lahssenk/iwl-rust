@@ -1,3 +1,3 @@
 pub fn public() {
-    println!("hello")
+    println!("sub::private::public()")
 }

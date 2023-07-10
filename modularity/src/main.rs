@@ -3,15 +3,19 @@ mod sub;
 fn main() {
     // outer is a direct child of the crate
     // and public is a public module
+    println!("invoke outer::public::public() from main...");
     outer::public::public();
+
     // outer is a direct child of the crate
     // and proxy_public is public
+    println!("invoke outer::proxy_public() from main...");
     outer::proxy_public();
     // outer::private is not visible
     // outer::public::_private is not visible
 
     // sub is added into scope, and its child mod "module1" is made
     // public in mod.rs
+    println!("invoke sub::public::public() from main...");
     sub::public::public();
     // sub::private not visible
 }
@@ -23,6 +27,7 @@ mod outer {
         fn _private() {
             // outer::private is visible because by default
             // parent (outer) is visible to child (public)
+            println!("invoke super::private() from outer::private::_private()");
             super::private();
         }
     }
@@ -31,7 +36,7 @@ mod outer {
     // public
     pub mod public {
         pub fn public() {
-            println!("hello");
+            println!("invoke super::private() from outer::public::public()");
             // super::private::private is not accessible because
             // private is not visible to outer (parent of public)
 
@@ -41,17 +46,18 @@ mod outer {
         }
 
         fn _private() {
-            println!("hello");
+            println!("outer::public::_private()");
         }
     }
 
     // this is not visible to main even though outer is public
     // and therefor visible to main
     fn private() {
-        println!("hello");
+        println!("outer::private()");
     }
 
     pub fn proxy_public() {
+        println!("invoke public::public() from outer::proxy_public");
         public::public();
     }
 }
