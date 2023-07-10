@@ -9,4 +9,5 @@ members = [
     "flow_control",
     "functions",
     "errors",
+    "testing",
 ]
