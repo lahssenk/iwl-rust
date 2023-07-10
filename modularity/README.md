@@ -5,6 +5,10 @@ This chapter presents how to modularize your code in rust.
 A build unit in rust is called a crate, consider it being a package.
 Then a crate can be composed/divided into modules.
 
+# Resources
+- [separating modules into multiple files](https://doc.rust-lang.org/book/ch07-05-separating-modules-into-different-files.html)
+- [referring to item in module tree](https://doc.rust-lang.org/book/ch07-03-paths-for-referring-to-an-item-in-the-module-tree.html)
+
 # Modules
 
 A module can be declared many ways:
