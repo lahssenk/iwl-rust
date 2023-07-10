@@ -14,7 +14,7 @@ Read [the installation guide](INSTALL.md) to prepare your machine. This repo is 
 - [Objects/Classes](objects/README.md)
 - [Flow Control](flow_control/README.md)
 - [Functions](functions/README.md)
-- [Error Handling]()
+- [Error Handling](errors/README.md)
 - [Testing]()
 - [Methods]()
 - [Modularity]()
