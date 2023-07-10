@@ -10,4 +10,5 @@ members = [
     "functions",
     "errors",
     "testing",
+    "methods",
 ]

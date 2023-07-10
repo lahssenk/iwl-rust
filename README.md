@@ -16,7 +16,7 @@ Read [the installation guide](INSTALL.md) to prepare your machine. This repo is 
 - [Functions](functions/README.md)
 - [Error Handling](errors/README.md)
 - [Testing](testing/README.md)
-- [Methods]()
+- [Methods](methods/README.md)
 - [Modularity]()
 - [Imports]()
 - [Compilation]()
