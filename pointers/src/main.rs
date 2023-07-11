@@ -54,20 +54,27 @@ fn main() {
     }
 
     let val = String::from("some contents");
+    // lets wrap the value into a mutex to allow for concurrent
+    // writes
+    let mutex = std::sync::Mutex::new(val);
     // let's wrap the value into an Arc, because we'll spawn threads
     // and compiler does not know which reference should be dropped first
-    let arc = Arc::new(val);
+    let arc = Arc::new(mutex);
     let clone1 = arc.clone();
     let clone2 = arc.clone();
     // spawn a thread executing a closure
     let thread1 = std::thread::spawn(move || {
         std::thread::sleep(std::time::Duration::from_millis(100));
-        println!("clone1: {clone1}");
+        let mut data = clone1.lock().unwrap();
+        data.push_str("abc");
+        println!("clone1: {data}");
     });
     // another thread
     let thread2 = std::thread::spawn(move || {
         std::thread::sleep(std::time::Duration::from_millis(50));
-        println!("clone2: {clone2}");
+        let mut data = clone2.lock().unwrap();
+        data.push_str("def");
+        println!("clone2: {data}");
     });
 
     // wait for threads to return
