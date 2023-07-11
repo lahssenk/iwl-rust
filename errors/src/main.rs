@@ -1,3 +1,5 @@
+use std::panic;
+
 fn main() {
     let input = 10;
     let res = might_fail(input);
@@ -16,6 +18,13 @@ fn main() {
 
     // assert that the result was Ok(10)
     assert_eq!(Ok(10), res);
+
+    // catch a panic.
+    // By default, a panic will cause the stack to unwind. The unwinding can be caught with panic::catch_unwind
+    let result = panic::catch_unwind(|| {
+        panic!("oh no!");
+    });
+    assert!(result.is_err());
 
     // use the unwrap() shortcut to panic on Err instead of properly handling errors
     let res = bubble_error_up(1).unwrap();
