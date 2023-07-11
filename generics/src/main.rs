@@ -1,4 +1,4 @@
-use core::fmt::Debug;
+use core::fmt::{Debug, Display};
 
 fn main() {
     let with_string = MyGenericType {
@@ -20,6 +20,8 @@ fn main() {
     generic_fn(&with_int);
 
     println!("result from add_42_millions(25)={}", add_42_millions(25));
+
+    println!("formatted: {}", format_name("abc"));
 }
 
 // create a Generic type, and
@@ -73,4 +75,12 @@ where
 //   fn add_42_millions<T: Into<i32>>(x: T) -> i32 {
 fn add_42_millions(x: impl Into<i32>) -> i32 {
     x.into() + 42_000_000
+}
+
+// a function can be generic by accepting a generic argument,
+// but it can also return a generic type that satisfies a trait.
+// The caller will not know the specific typed and can only use
+// the methods on the trait. Useful for hiding underlying data.
+fn format_name(name: impl Display) -> impl Display {
+    format!("Hello {name}")
 }
