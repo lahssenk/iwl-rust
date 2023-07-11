@@ -15,4 +15,5 @@ members = [
     "imports",
     "pointers",
     "interfaces",
+    "generics",
 ]
