@@ -33,3 +33,18 @@ mod tests {
         assert_eq!(res, input);
     }
 }
+
+// documentation tests -----
+// Code blocks in /// comments are automatically seen as Rust code
+// The code will be compiled and executed as part of cargo test
+
+/// Shortens a string to the given length.
+///
+/// ```
+/// use testing::shorten_string;
+/// assert_eq!(shorten_string("Hello World", 5), "Hello");
+/// assert_eq!(shorten_string("Hello World", 20), "Hello World");
+/// ```
+pub fn shorten_string(s: &str, length: usize) -> &str {
+    &s[..std::cmp::min(length, s.len())]
+}
