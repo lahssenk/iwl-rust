@@ -66,6 +66,8 @@ fn main() {
     let thread1 = std::thread::spawn(move || {
         std::thread::sleep(std::time::Duration::from_millis(100));
         let mut data = clone1.lock().unwrap();
+        // acquire a lock returns a guard, which automatically unlock the mutex when dropped
+        // the guard implements deref, so we can access methods from the underlying type (String)
         data.push_str("abc");
         println!("clone1: {data}");
     });
