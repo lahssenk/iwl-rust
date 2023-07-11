@@ -6,6 +6,13 @@ fn main() {
     john.print_age();
     john.describe();
 
+    // the size in memory of the vector needs to be knows in advance.
+    // We want the vec to hold values that implement the trait, but
+    // they can be of homogeneous types. We use trait objects (syntax `dyn <trait>`)
+    // for this.
+    // The vector is a header type on the Stack, with ptr, capacity and len.
+    // The pointers holds the address of the data on the Heap.
+    // Each item is stored on the heap with Box.
     let pets: Vec<Box<dyn Pet>> = vec![
         Box::new(Cat),
         Box::new(Dog {
@@ -15,10 +22,37 @@ fn main() {
     for pet in pets {
         println!("Hello {}!", pet.name());
     }
+
+    println!(
+        "{} {}",
+        std::mem::size_of::<Dog>(),
+        std::mem::size_of::<Cat>()
+    );
+    println!(
+        "{} {}",
+        std::mem::size_of::<&Dog>(),
+        std::mem::size_of::<&Cat>()
+    );
+    println!("{}", std::mem::size_of::<&dyn Pet>());
+    println!("{}", std::mem::size_of::<Box<dyn Pet>>());
+
+    // use derived traits
+    let p1 = Player::default();
+    let p2 = p1.clone();
+    println!(
+        "Is {:?}\nequal to {:?}?\nThe answer is {}!",
+        &p1,
+        &p2,
+        if p1 == p2 { "yes" } else { "no" }
+    );
 }
 
+// trait objects --------
 trait Pet {
     fn name(&self) -> String;
+    fn method_with_default_impl(&self) {
+        println!("the default impl");
+    }
 }
 
 struct Dog {
@@ -63,4 +97,12 @@ impl Describe for &Person {
 // trait Describe requires that trait PrintAge is also satisfied.
 trait Describe: PrintAge {
     fn describe(self);
+}
+
+// deriving traits
+#[derive(Debug, Clone, PartialEq, Eq, Default)]
+struct Player {
+    name: String,
+    strength: u8,
+    hit_points: u8,
 }

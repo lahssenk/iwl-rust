@@ -18,6 +18,8 @@ fn main() {
 
     generic_fn(&with_string);
     generic_fn(&with_int);
+
+    println!("result from add_42_millions(25)={}", add_42_millions(25));
 }
 
 // create a Generic type, and
@@ -29,7 +31,7 @@ struct MyGenericType<T> {
 // declare a generic method.
 // if the type is generic over T, the impl also needs to be generic over T
 impl<T> MyGenericType<T>
-// enforce some constraints on the generic type T
+// enforce some trait bounds (constraints) on the generic type T
 where
     T: Debug,
 {
@@ -65,4 +67,10 @@ where
 {
     let cloned = a.clone_inner();
     println!("generic_fn: cloned value={:?}", cloned);
+}
+
+// Syntactic sugar for:
+//   fn add_42_millions<T: Into<i32>>(x: T) -> i32 {
+fn add_42_millions(x: impl Into<i32>) -> i32 {
+    x.into() + 42_000_000
 }
