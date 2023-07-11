@@ -21,3 +21,8 @@ trait PrintAge{
     fn print_age(self)
 }
 ```
+
+## Concepts
+
+- trait objects: syntax `dyn <trait>`, hold a type on heap implementing a trait, with dynamic dispatch
+- trait bounds: constraints on a generic type to implement a set of traits
