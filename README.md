@@ -22,7 +22,7 @@ Read [the installation guide](INSTALL.md) to prepare your machine. This repo is 
 - [Compilation](compilation/README.md)
 - [Pointers](pointers/README.md)
 - [Interfaces]()
-- [Generics]()
+- [Generics](interfaces/README.md)
 - [Files]()
 - [Networking]()
 - [Multi-threading]()
