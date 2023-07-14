@@ -2,28 +2,28 @@
 
 This project is a progression for learning the rust programming language.
 
-Read [the installation guide](INSTALL.md) to prepare your machine. This repo is organized as a WORKSPACE, with each subdirectory being its own create (project) with a /src/main.rs that you can run with `cargo run`, example `cargo run --bin hello-world`.
+Read [the installation guide](INSTALL.md) to prepare your machine. This repo is organized as a WORKSPACE, with each subdirectory being its own crate (project) with a /src/main.rs that you can run with `cargo run`, example `cargo run --bin hello_world`.
 
 # PROGRESSION
 
 ## Chapters
-- [Hello world](hello_world/README.md)
-- [Basic Types](scalar_types/README.md)
-- [Collections](collections/README.md)
-- [Enums](enums/README.md)
-- [Objects/Classes](objects/README.md)
-- [Flow Control](flow_control/README.md)
-- [Functions](functions/README.md)
-- [Error Handling](errors/README.md)
-- [Testing](testing/README.md)
-- [Methods](methods/README.md)
-- [Modularity](modularity/README.md)
-- [Imports](imports/README.md)
-- [Compilation](compilation/README.md)
-- [Pointers](pointers/README.md)
-- [Interfaces](interfaces/README.md)
-- [Generics](generics/README.md)
-- [Files](files/README.md)
+- [Hello world](lessons/hello_world/README.md)
+- [Basic Types](lessons/scalar_types/README.md)
+- [Collections](lessons/collections/README.md)
+- [Enums](lessons/enums/README.md)
+- [Objects/Classes](lessons/objects/README.md)
+- [Flow Control](lessons/flow_control/README.md)
+- [Functions](lessons/functions/README.md)
+- [Error Handling](lessons/errors/README.md)
+- [Testing](lessons/testing/README.md)
+- [Methods](lessons/methods/README.md)
+- [Modularity](lessons/modularity/README.md)
+- [Imports](lessons/imports/README.md)
+- [Compilation](lessons/compilation/README.md)
+- [Pointers](lessons/pointers/README.md)
+- [Interfaces](lessons/interfaces/README.md)
+- [Generics](lessons/generics/README.md)
+- [Files](lessons/files/README.md)
 - [Networking]()
 - [Multi-threading]()
 - [Async]()
