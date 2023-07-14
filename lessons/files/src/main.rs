@@ -36,4 +36,9 @@ fn main() {
         file.read_to_string(&mut content).unwrap();
         assert_eq!("Hello, world!Hello again!", content.as_str())
     }
+
+    {
+        println!("delete file");
+        std::fs::remove_file(filename.clone()).unwrap();
+    }
 }
